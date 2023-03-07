@@ -1,0 +1,314 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");
+@import '../node_modules/remixicon/fonts/remixicon.css';
+@import '../node_modules/animate.css/animate.min.css';
+
+//bootstrap customize
+$navbar-nav-link-padding-x:2rem;
+
+$font-family-sans-serif:"Poppins";
+$font-size-base:0.9rem;
+
+$body-bg:hsl(19, 100%, 96%);
+$body-color:hsl(19, 16%, 35%);
+$primary:hsl(19, 64%, 54%);
+$light:hsl(19, 8%, 55%);
+
+$btn-border-radius:2rem;
+$btn-padding-x:1.8rem;
+$btn-padding-y:0.8rem;
+
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 6,
+  9: $spacer * 7,
+  10: $spacer * 8,
+);
+
+
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+.title{
+    font-family: "Lora",serif;
+    color: hsl(19, 16%, 15%);
+}
+nav{
+    background-color: hsl(19, 100%, 96%);
+}
+.sub-title{
+    font-family: "Dancing Script", cursive;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+
+}
+
+body{
+    height:3000px;
+
+    overflow-x: hidden;
+}
+
+//custom css
+.navbar-brand-logo{
+    height: 1.5rem;
+}
+.btn-primary,.btn-primary:hover,.btn-primary:active{
+    color:white;
+}
+.btn-icon i{
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.home-title img{
+    height: 50px;;
+}
+#home{
+  position: relative;
+
+  overflow: hidden;
+}
+#home::before{
+    content: url('../img/leaf-branch-2.png');
+    opacity: 0.2;
+    position: absolute;
+    transform:scale(0.7) translateX(-50px) rotate(90deg);
+}
+#home::after{
+    content: url('../img/leaf-branch-4.png');
+    
+    opacity: 0.2;
+    position: absolute;
+    transform:scale(0.7) translateX(100px) rotate(-20deg) ;
+    bottom:120px;
+    right:-30px;
+}
+.spacer-100{
+    margin:100px auto;
+}
+#about{
+    position: relative;
+}
+#about::before{
+    content: url('../img/leaf-branch-1.png');
+    opacity: 0.2;
+    position: absolute;
+    bottom:-30px;
+    right:-120px;
+    transform:scale(0.6) translateX(-100px) rotate(-48deg);
+}
+.fromcentolefts{
+    animation-name: centoleft;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+.fromcentorights{
+    animation-name: centoright;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+.fromlefts{
+    animation-name: myleft;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+   
+}
+
+.fromrights{
+    animation-name: myright;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+ 
+}
+.fromtops{
+    animation-name: mytop;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+.frombottoms{
+    animation: bottom 2s linear;
+}
+.footerani{
+    animation: top 2s linear;
+}
+@keyframes top {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes bottom {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes centoleft{
+    from{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes centoright{
+    from{
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes myleft{
+    from{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes myright{
+    from{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes mytop{
+    from{
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.dish-card{
+    background-color: hsl(19, 100%, 97%);
+}
+.dish-card img{
+    transform: translateY(-50px);
+    transition: 0.5s;
+}
+.dish-card:hover img{
+    transform: translateY(-60px);
+}
+#recent{
+    position: relative;
+}
+#recent::before{
+    content:url('../img/leaf-branch-3.png');
+    width: 150px;
+    position: absolute;
+    top:0;
+    right:0;
+
+    opacity: 0.2;
+
+    transform:scale(0.7) translate(30px) rotate(-20deg);
+}
+#recent::after{
+    content: url('../img/spinach-leaf.png');
+    
+    position: absolute;
+    bottom: -200px;
+    right: 300px;
+    transform: scale(0.3) rotate(40deg);
+    opacity: 0.9;
+}
+
+ 
+   
+.newsletter{
+    border-radius: 2rem;
+}
+
+@include media-breakpoint-down(md) { 
+    .newsletter{
+        border-radius: 0;
+    }
+    #about::before{
+        opacity: none;
+    }
+    
+ }
+
+#footer{
+    position: relative;
+}
+.sociallinks{
+    color: hsl(19, 64%, 54%);
+}
+@media (max-width:420px) {
+    .footerbg1{
+        position: absolute;
+        bottom:191px;
+        left:-15px;
+       
+    }
+    .footerbg2{
+        position: absolute;
+        top:20px;
+        right:50px;
+    }
+    #recent::after{
+        position: absolute;
+        right:125px;
+    }
+}
+@media (width:390px){
+    .footerbg1{
+        position: absolute;
+        bottom:188px;
+        left:-15px;
+    }
+    .footerimg{
+        width:50px;
+    }
+}
+@media (min-width: 992px){
+    .footerlinks{
+       
+        margin-bottom:-1.8rem;
+    }
+}
